@@ -11,8 +11,11 @@ var randomFood = function()
 }
 */
 let x
+let y
 let vaccineList = [""]
+let vaccineList2 = [""]
 const text = "<br><br><button onclick=\"randomVac()\">สุ่มเข็มแรกใหม่</button>"
+const cryUrl = "<img = src=\"cry.jpg\">"
 var randomVac = function()
 {
     vaccineList = ["Sinovac", "Aztrazeneca", "Aztra SBS (ซาบซึ้ง Version)", "กดจอง Sinopharm ไม่ทัน", "Pfizer VVIP", "โมเดอ(ชาติ)หน้า", "น้ำเกลือ", "รอจัดสรรเป็นกลุ่มต่อไป"];
@@ -30,16 +33,26 @@ var randomVac = function()
     {
         document.getElementById("randomVaccine").innerHTML = vaccineList[x] + text;
     }
+    checkLoyalty()
 }
 
 var randomVac2 = function()
 {
-    let vaccineList2 = ["Sinovac", "Aztrazeneca", "Aztra SBS (ซาบซึ้ง Version)", "กดจอง Sinopharm ไม่ทัน", "Pfizer หมดอายุ", "โมเดอ(ชาติ)หน้า", "น้ำเกลือ", "โดนเท"];
-    let y = Math.round((Math.random() * (vaccineList2.length-1)));
+    vaccineList2 = ["Sinovac", "Aztrazeneca", "Aztra SBS (ซาบซึ้ง Version)", "กดจอง Sinopharm ไม่ทัน", "Pfizer หมดอายุ", "โมเดอ(ชาติ)หน้า", "น้ำเกลือ", "โดนเท"];
+    y = Math.round((Math.random() * (vaccineList2.length-1)));
     document.getElementById("randomVaccine").innerHTML = "เข็มแรก คุณจะได้ฉีด<br>" + vaccineList[x];
     document.getElementById("randomDose2").innerHTML = "เข็มสองคุณจะได้ฉีด<br>" + vaccineList2[y] + text;
     if (vaccineList[x] == "Sinovac" && vaccineList2[y = "Sinovac"])
     {
         document.getElementById("dose3").innerHTML = "ยินดีด้วย คุณได้ลุ้นจับฉลากลุ้นบูสเตอร์ Pfizer";
+    }
+    
+}
+
+var checkLoyalty = function()
+{
+    if (x == 2 || y == 2)
+    {
+        document.getElementById("dose3").innerHTML = cryUrl;
     }
 }
