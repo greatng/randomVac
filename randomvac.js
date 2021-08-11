@@ -47,7 +47,7 @@ var randomVac2 = function()
         document.getElementById("dose3").innerHTML = "ยินดีด้วย คุณได้ลุ้นจับฉลากลุ้นบูสเตอร์ Pfizer";
     }
     checkLoyalty()
-    
+    x = y = null;
 }
 
 var checkLoyalty = function()
@@ -55,6 +55,5 @@ var checkLoyalty = function()
     if (x == 2 || y == 2)
     {
         document.getElementById("dose3").innerHTML = cryUrl;
-        x = y = null;
     }
 }
