@@ -21,7 +21,7 @@ var randomVac = function()
     vaccineList = ["Sinovac", "Aztrazeneca", "Aztra SBS (ซาบซึ้ง Version)", "กดจอง Sinopharm ไม่ทัน", "Pfizer VVIP", "โมเดอ(ชาติ)หน้า", "น้ำเกลือ", "รอจัดสรรเป็นกลุ่มต่อไป"];
     x = Math.round((Math.random() * (vaccineList.length-1)));
     document.getElementById("randomDose2").innerHTML = ""
-    
+    document.getElementById("dose3").innerHTML = ""
     if (x != 7 && x != 3) 
     {
         document.getElementById("randomVaccine").innerHTML = "เข็มแรก คุณจะได้ฉีด<br>" + vaccineList[x] + "<br><br><button onclick=\"randomVac2()\">กดอีกทีเพื่อสุ่มเข็มสอง</button>" 
@@ -46,6 +46,7 @@ var randomVac2 = function()
     {
         document.getElementById("dose3").innerHTML = "ยินดีด้วย คุณได้ลุ้นจับฉลากลุ้นบูสเตอร์ Pfizer";
     }
+    checkLoyalty()
     
 }
 
