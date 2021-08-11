@@ -15,7 +15,7 @@ let y
 let vaccineList = [""]
 let vaccineList2 = [""]
 const text = "<br><br><button onclick=\"randomVac()\">สุ่มเข็มแรกใหม่</button>"
-const cryUrl = "<img = src=\"cry.jpg\">"
+const cryUrl = "<img src=\"cry.jpg\" class=\"responsive\">"
 var randomVac = function()
 {
     vaccineList = ["Sinovac", "Aztrazeneca", "Aztra SBS (ซาบซึ้ง Version)", "กดจอง Sinopharm ไม่ทัน", "Pfizer VVIP", "โมเดอ(ชาติ)หน้า", "น้ำเกลือ", "รอจัดสรรเป็นกลุ่มต่อไป"];
